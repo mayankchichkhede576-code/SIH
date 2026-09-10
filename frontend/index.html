@@ -1,1 +1,259 @@
-<!doctype html><html><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><title>Robin Intelligence</title></head><body><div id="root"></div><script type="module" src="/src/main.jsx"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DarkTrace Intel — Threat Intelligence</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+        <!-- DARKTRACE INTRO / PRELOADER -->
+    <div class="intro-screen" id="introScreen">
+        <div class="intro-grid"></div>
+
+        <div class="intro-corner intro-corner-tl">DT / 01</div>
+        <div class="intro-corner intro-corner-tr">SECURE CHANNEL</div>
+        <div class="intro-corner intro-corner-bl">DARKTRACE INTEL</div>
+        <div class="intro-corner intro-corner-br">2026</div>
+
+        <div class="intro-center">
+            <div class="intro-logo">DT</div>
+            <p class="intro-kicker">DARKTRACE INTEL</p>
+
+            <div class="intro-status">
+                <span class="intro-status-text" id="introStatus">INITIALIZING SYSTEM</span>
+                <span class="intro-percent" id="introPercent">00%</span>
+            </div>
+
+            <div class="intro-progress">
+                <span id="introProgress"></span>
+            </div>
+
+            <div class="intro-log" id="introLog">
+                <span>ENCRYPTED CHANNEL // READY</span>
+            </div>
+        </div>
+
+        <div class="intro-word" aria-hidden="true">DARKTRACE</div>
+    </div>
+
+    <div class="noise"></div>
+    <div class="cursor-dot"></div>
+
+    <header class="topbar">
+        <a href="#" class="brand" aria-label="DarkTrace Intel home">
+            <span class="brand-mark">DT</span>
+            <span>DarkTrace Intel</span>
+        </a>
+
+        <div class="system-status">
+            <span class="status-dot"></span>
+            SYSTEM ONLINE
+        </div>
+
+        <span class="menu-label">SECURITY PLATFORM / 01</span>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section class="hero">
+            <div class="hero-meta">
+                <span>THREAT INTELLIGENCE</span>
+                <span>EST. 2026</span>
+            </div>
+
+            <div class="hero-copy">
+                <p class="eyebrow">01 / INTRODUCTION</p>
+
+                <h1>
+                    THE DARK WEB
+                    <span>LEAVES TRACES.</span>
+                </h1>
+
+                <div class="hero-bottom">
+                    <p>
+                        DarkTrace Intel turns hidden signals into actionable
+                        intelligence — detect, investigate and understand
+                        digital threats before they become incidents.
+                    </p>
+
+                    <a href="#login" class="enter-link">
+                        <span>ENTER PLATFORM</span>
+                        <span class="arrow">↗</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-scroll">SCROLL TO EXPLORE <span>↓</span></div>
+        </section>
+
+        <!-- TICKER -->
+        <div class="ticker" aria-hidden="true">
+            <div class="ticker-track">
+                <span>THREAT DETECTED</span><i>✦</i>
+                <span>AI ANALYSIS</span><i>✦</i>
+                <span>DARK WEB INTELLIGENCE</span><i>✦</i>
+                <span>TOR MONITORING</span><i>✦</i>
+                <span>THREAT ACTORS</span><i>✦</i>
+                <span>THREAT DETECTED</span><i>✦</i>
+                <span>AI ANALYSIS</span><i>✦</i>
+                <span>DARK WEB INTELLIGENCE</span><i>✦</i>
+                <span>TOR MONITORING</span><i>✦</i>
+                <span>THREAT ACTORS</span><i>✦</i>
+            </div>
+        </div>
+
+        <!-- THREAT LANDSCAPE -->
+        <section class="landscape section-pad">
+            <div class="section-number">02</div>
+            <div class="section-title">
+                <p class="eyebrow">THREAT LANDSCAPE</p>
+                <h2>SEE WHAT<br><em>OTHERS MISS.</em></h2>
+            </div>
+
+            <div class="threat-list">
+                <div class="threat-row">
+                    <span>01</span><strong>RANSOMWARE</strong><small>CRITICAL</small>
+                </div>
+                <div class="threat-row">
+                    <span>02</span><strong>DATA LEAKS</strong><small>HIGH</small>
+                </div>
+                <div class="threat-row">
+                    <span>03</span><strong>CREDENTIALS</strong><small>HIGH</small>
+                </div>
+                <div class="threat-row">
+                    <span>04</span><strong>MALWARE</strong><small>MEDIUM</small>
+                </div>
+                <div class="threat-row">
+                    <span>05</span><strong>PHISHING</strong><small>MEDIUM</small>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI ANALYSIS -->
+        <section class="analysis section-pad">
+            <div class="section-number">03</div>
+
+            <div class="analysis-copy">
+                <p class="eyebrow">AI THREAT ANALYSIS</p>
+                <h2>THE MACHINE<br><span>SEES WHAT</span><br>YOU DON'T.</h2>
+                <p class="muted">
+                    Feed DarkTrace a suspicious source and let AI identify
+                    patterns, risk signals and hidden relationships.
+                </p>
+            </div>
+
+            <div class="scan-card">
+                <div class="scan-top">
+                    <span>LIVE ANALYSIS</span>
+                    <span class="pulse">●</span>
+                </div>
+
+                <div class="scan-line">
+                    <span>SCANNING DARK WEB</span>
+                    <span class="mono">78%</span>
+                </div>
+
+                <div class="progress">
+                    <span></span>
+                </div>
+
+                <div class="scan-data">
+                    <p><span>ACTOR</span> UNKNOWN_47</p>
+                    <p><span>RISK</span> HIGH</p>
+                    <p><span>CONFIDENCE</span> 92%</p>
+                </div>
+
+                <button class="scan-button" type="button">START ANALYSIS <span>↗</span></button>
+            </div>
+        </section>
+
+        <!-- NETWORK -->
+        <section class="network section-pad">
+            <div class="section-number">04</div>
+            <div class="network-heading">
+                <p class="eyebrow">THREAT ACTOR MAPPING</p>
+                <h2>FOLLOW<br>THE <em>CONNECTIONS.</em></h2>
+            </div>
+
+            <div class="network-visual" aria-label="Illustrative threat network">
+                <div class="network-line line-1"></div>
+                <div class="network-line line-2"></div>
+                <div class="network-line line-3"></div>
+                <div class="network-line line-4"></div>
+
+                <div class="node center">
+                    <b>THREAT<br>ACTOR</b>
+                </div>
+                <div class="node node-a"><span>EMAIL</span></div>
+                <div class="node node-b"><span>DOMAIN</span></div>
+                <div class="node node-c"><span>WALLET</span></div>
+                <div class="node node-d"><span>USERNAME</span></div>
+            </div>
+        </section>
+
+        <!-- LOGIN -->
+        <section class="login-section section-pad" id="login">
+            <div class="section-number">05</div>
+
+            <div class="login-intro">
+                <p class="eyebrow">SECURE ACCESS</p>
+                <h2>ENTER<br><em>DARKTRACE.</em></h2>
+                <p class="muted">
+                    Sign in to access your threat intelligence workspace.
+                </p>
+            </div>
+
+            <div class="login-card">
+                <div class="login-header">
+                    <span class="card-index">ACCESS / 05</span>
+                    <h3>Welcome Back</h3>
+                    <p>Sign in to continue</p>
+                </div>
+
+                <form id="loginForm">
+                    <div class="input-group">
+                        <label for="email">EMAIL ADDRESS</label>
+                        <input type="email" id="email" placeholder="you@example.com" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="password">PASSWORD</label>
+                        <input type="password" id="password" placeholder="Enter password" required>
+                    </div>
+
+                    <div class="options">
+                        <label>
+                            <input type="checkbox">
+                            Remember Me
+                        </label>
+                        <a href="forgetpassword.html">Forgot Password?</a>
+                    </div>
+
+                    <button type="submit" class="primary-button">
+                        SIGN IN <span>↗</span>
+                    </button>
+                </form>
+
+                <div class="divider"><span>OR</span></div>
+
+                <button type="button" class="google-btn">CONTINUE WITH GOOGLE</button>
+
+                <div class="signup-link">
+                    <p>Don't have an account? <a href="signup.html">Create Account</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+            <span>DARKTRACE INTEL</span>
+            <span>THREAT INTELLIGENCE / 2026</span>
+        <span>SECURE BY DESIGN</span>
+    </footer>
+
+    <script type="module" src="/login.js"></script>
+</body>
+</html>
