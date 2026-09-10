@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Secrets
+.env
+*.env
+
+# Node
+node_modules/
+dist/
+
+# Runtime data
+data/
+*.db
+*.sqlite3
+*.log
+.pytest_cache/
+.ruff_cache/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
