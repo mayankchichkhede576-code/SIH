@@ -348,6 +348,17 @@ PRESET_PROMPTS = {
 
 def generate_summary(llm, query, content, preset="threat_intel", custom_instructions=""):
     system_prompt = PRESET_PROMPTS.get(preset, PRESET_PROMPTS["threat_intel"])
+    system_prompt = system_prompt.rstrip() + """
+
+IMPORTANT OUTPUT RULES:
+- The text above describes the required report structure; it is not report content.
+- Never output literal placeholders such as {{{{query}}}}, {{{{content}}}}, or "every source link used for the analysis".
+- Never invent a source, artifact, crawl result, IOC, actor, or claim.
+- Use only the evidence in the EVIDENCE block supplied by the user message.
+- If the evidence is empty or only contains a page title, say that the available evidence is insufficient.
+- Do not claim that a site was crawled unless its extracted text is present in the evidence.
+- Return only the completed Markdown report, with no preamble or prompt commentary.
+"""
     invoke_vars = {"query": query, "content": content}
     if custom_instructions and custom_instructions.strip():
         # Append as a template placeholder filled by an invoke value, so literal
@@ -356,7 +367,18 @@ def generate_summary(llm, query, content, preset="threat_intel", custom_instruct
         system_prompt = system_prompt.rstrip() + "\n\nAdditionally focus on: {custom_focus}"
         invoke_vars["custom_focus"] = custom_instructions.strip()
     prompt_template = ChatPromptTemplate(
-        [("system", system_prompt), ("user", "{content}")]
+        [
+            ("system", system_prompt),
+            (
+                "user",
+                """Investigation query: {query}
+
+EVIDENCE FROM SEARCH AND SCRAPING:
+{content}
+
+Generate the final report now. Replace every report instruction with evidence-based findings. """,
+            ),
+        ]
     )
     chain = prompt_template | llm | StrOutputParser()
     return chain.invoke(invoke_vars)
